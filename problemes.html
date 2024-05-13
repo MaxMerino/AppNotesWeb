@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidents i problemes</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <aside>
+      <a href="index.html">Descripció i objectius del projecte</a>
+      <a href="cronograma.html">Cronograma del projecte</a>
+      <a href="disseny_bd.html">Disseny de BD</a>
+      <a href="uml.html">UML</a>
+      <a href="manual.html">Manual bàsic d’ús de l’aplicació</a>
+      <a href="problemes.html">Incidents i problemes</a>
+    </aside>
+
+    <section>
+      <h1>Incidents i problemes</h1>
+      <h3>Problema a causa de module-info.java</h3>
+      <p>
+        Quan vaig haver d'instal·lar les llibreries per connectar l'aplicació a la base de dades i per encriptar les contrasenyes
+        no les podia importar, això passava perquè, per alguna raó, a l'arxiu <strong>module-info.java</strong> no sortien
+        les llibreries com requeriments, per això vaig haver de escriure els <strong>requires</strong> manualment:
+      </p>
+      <img src="img/incident1.PNG" alt="Arxiu module-info.java">
+      <h3>Problema dels camps de text</h3>
+      <p>Quan vaig crear la primera pantalla amb FXML la selecció no era del primer textField i quan es pressionava la tecla <strong>tab</strong> es seleccionava un textField que no era el següent
+      això era a causa que quan vaig afegir els textFields no els vaig col·locar en ordre de creació. Per tant ho vaig solucionar tornant a crear els camps per ordre.
+      </p>
+      <h4>Abans d'arreglar-ho:</h4>
+      <img src="img/incident2.1.PNG" alt="Abans d'arreglar-ho">
+      <h4>Després d'arreglar-ho:</h4>
+      <img src="img/incident2.2.PNG" alt="Després d'arreglar-ho">
+      <h3>Problema del buscador</h3>
+      <p>Al buscador per compartir si s'escrivia el caràcter "%" o "_" es mostraven tots els usuaris de la base de dades, si hi haguessin mil·lers o mil·lions d'usuaris podria arribar a bloquejar o tancar l'aplicació.
+        Això és a causa de la consulta sql, aquesta fa servir l'operador LIKE i entén com comodí el caràcter "%"" i "_" fent que seleccionés tots els usuaris amb qualsevol caràcter.
+        La solució és simplement comprovar que el camp de text no inclogui aquests caràcters abans d'executar la consulta.
+      </p>  
+      <h4>Abans d'arreglar-ho:</h4>
+      <img src="img/incident3.1.PNG" alt="Abans d'arreglar-ho">
+      <h4>Després d'arreglar-ho:</h4>
+      <img src="img/incident3.2.PNG" alt="Després d'arreglar-ho">
+      
+      
+    </section>
+    <footer>
+      <p>Max Merino</p>
+      
+    </footer>
+  </body>
+</html>
