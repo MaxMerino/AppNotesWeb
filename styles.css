@@ -3,15 +3,30 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
+    
+    padding:0;
+    height:100%;
+}
+
+.fonsAside{
+    background-color: #80928e;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 aside {
     background-color: #3D6F71;
     position: fixed;
-    top: 0;
-    bottom: 0;
+    top: 50%;   
+
+    transform: translate(0, -50%);
+    margin: auto;
     width: 200px;
-    overflow-y: auto;
+    overflow-y: scroll;
     z-index: 1;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -40,7 +55,7 @@ section {
 
 section p {
     padding: 10px;
-    margin: 15px 0;
+    margin: 15px 200px;
     border-radius: 5px;
     text-align: justify;
     background-color: #FFF;
@@ -85,7 +100,7 @@ footer{
     overflow: hidden;    
     border-radius: 10px;
     background-color: #ececec;
-
+    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
     
 }
