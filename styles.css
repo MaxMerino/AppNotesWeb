@@ -26,7 +26,7 @@ aside {
     transform: translate(0, -50%);
     margin: auto;
     width: 200px;
-    overflow-y: scroll;
+    overflow-y: hidden;
     z-index: 1;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -80,6 +80,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 15px;
+    text-decoration: underline;
 }
 
 h1 {
